@@ -3,12 +3,12 @@ export default function cleanSet(set, startString) {
     return '';
   }
 
-  const setToList = [...set];
   const isStarted = [];
 
-  setToList.forEach((element) => {
+  [...set].forEach((element) => {
     if (element.startsWith(startString)) {
-      isStarted.push(element.substring(startString.length));
+      isStarted.push(element
+        .substring(startString.length));
     }
   });
 
