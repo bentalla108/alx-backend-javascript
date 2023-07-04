@@ -6,7 +6,7 @@ export default function cleanSet(set, startString) {
   const isStarted = [];
 
   [...set].forEach((element) => {
-    if (element.startsWith(startString)) {
+    if (element && element.startsWith(startString)) {
       isStarted.push(element
         .substring(startString.length));
     }
