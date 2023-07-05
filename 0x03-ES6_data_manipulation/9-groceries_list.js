@@ -1,18 +1,10 @@
 export default function groceriesList() {
-  const dictionary = {
-    Apples: 10,
-    Tomatoes: 10,
-    Pasta: 1,
-    Rice: 1,
-    Banana: 5,
-  };
+  const product = new Map();
+  product.set('Apples', 10);
+  product.set('Tomatoes', 10);
+  product.set('Pasta', 1);
+  product.set('Rice', 1);
+  product.set('Banana', 5);
 
-  const map = new Map();
-  /* no-prototype-builtins */
-  for (const key in dictionary) {
-    if (Object.prototype.hasOwnProperty.call(dictionary, 'key')) {
-      map.set(key, dictionary[key]);
-    }
-  }
-  return map;
+  return product;
 }
